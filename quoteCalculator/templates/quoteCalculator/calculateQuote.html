@@ -14,58 +14,109 @@
   </head>
 
   <body class="bg-light">
+  	<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+        <nav class="my-2 my-md-0 mr-md-3">
+      		<a href="{% url 'home' %}">Quote Calculator</a>
+      		<a class="p-2 text-dark" href="{% url 'calculateQuote' %}">Get a Quote</a>	
+        </nav>
+    </div>
 
     <div class="container">
-        <div class="col-md-8 order-md-1">
-          <form class="needs-validation" novalidate>
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <label for="firstName">First name</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                  Valid first name is required.
-                </div>
-              </div>
-              <div class="col-md-6 mb-3">
-                <label for="lastName">Last name</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-                <div class="invalid-feedback">
-                  Valid last name is required.
-                </div>
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label for="username">Username</label>
-              <div class="input-group">
-                <div class="input-group-prepend">
-                  <span class="input-group-text">@</span>
-                </div>
-                <input type="text" class="form-control" id="username" placeholder="Username" required>
-                <div class="invalid-feedback" style="width: 100%;">
-                  Your username is required.
-                </div>
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label for="email">Email <span class="text-muted">(Optional)</span></label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com">
-              <div class="invalid-feedback">
-                Please enter a valid email address for shipping updates.
-              </div>
-            </div>
-
-            <div class="mb-3">
-              <label for="address">Address</label>
-              <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
-              <div class="invalid-feedback">
-                Please enter your shipping address.
-              </div>
+        <div class="col-md-9 order-md-3">
+          <h4>Address</h4>	
+          <form action="{% url 'calculate_rate' %}">
+          	<div class="mb-3">
+                <label for="firstName">Address</label>
+                <input type="text" class="form-control" name="address">
             </div>
 
             <hr class="mb-4">
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+            <h4> Rent Roll</h4>
+            <div class="row">
+              <div class="col-md-3 mb-3">
+                <label for="lastName">Monthly Rent</label>
+                <input type="text" class="form-control" name="monthly_rent">
+              </div>
+              <div class="col-md-3 mb-3">
+              	<label for="username">Unit Number</label>
+	            <input type="text" class="form-control" name="unit_number">
+              </div>
+              <div class="col-md-3 mb-3">
+	               <label for="email">Vacancy</label>
+	               <input type="text" class="form-control" name="vacancy">
+	            </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <label for="address">Bedrooms</label>
+                    <input type="text" class="form-control" name="bedrooms">
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <label for="address">Bathrooms</label>
+                    <input type="text" class="form-control" name="bedrooms">
+                </div>
+
+                <div class="col-md-3 mb-3">
+                    <label for="address">Annual Total</label>
+                    <input type="text" class="form-control" name="bedrooms">
+                </div>
+            </div>
+            
+            <hr class="mb-4">
+            <h4>Expense Items</h4>
+            <div class="row">
+	            <div class="col-md-3 mb-3">
+	              <label for="address">Marketing</label>
+	              <input type="text" class="form-control" name="bedrooms">
+	            </div>
+
+	            <div class="col-md-3 mb-3">
+	              <label for="address">Taxes</label>
+	              <input type="text" class="form-control" name="bedrooms">
+	            </div>
+
+	            <div class="col-md-3 mb-3">
+	              <label for="address">Insurance</label>
+	              <input type="text" class="form-control" name="bedrooms">
+	            </div>
+
+	            <div class="col-md-3 mb-3">
+	              <label for="address">Repairs</label>
+	              <input type="text" class="form-control" name="bedrooms">
+	            </div>
+	        </div>    
+            <div class="row">
+	            <div class="col-md-3 mb-3">
+	              <label for="address">Administration</label>
+	              <input type="text" class="form-control" name="bedrooms">
+	            </div>
+
+	            <div class="col-md-3 mb-3">
+	              <label for="address">Payroll</label>
+	              <input type="text" class="form-control" name="bedrooms">
+	            </div>
+
+	            <div class="col-md-3 mb-3">
+	              <label for="address">Utility</label>
+	              <input type="text" class="form-control" name="bedrooms">
+	            </div>
+
+	            <div class="col-md-3 mb-3">
+	              <label for="address">Management</label>
+	              <input type="text" class="form-control" name="bedrooms">
+	            </div>
+            </div>
+
+            <hr class="mb-4">
+	        <div class="mb-3">
+	            <label for="address">Capital Rate</label>
+	            <input type="text" class="form-control" name="bedrooms">
+	        </div>
+            
+            <hr class="mb-4">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Get Rate!</button>
           </form>
         </div>
       </div>

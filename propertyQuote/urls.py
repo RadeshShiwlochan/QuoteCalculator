@@ -20,5 +20,6 @@ import quoteCalculator.views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path( '', quoteCalculator.views.home, name="home" ),
-    path( 'calculateQuote/', quoteCalculator.views.calculateQuote, name="calculateQuote" )
+    path( 'calculateQuote/', quoteCalculator.views.calculateQuote, name="calculateQuote" ),
+    path( 'result/', quoteCalculator.views.calculate_rate, name="calculate_rate")
 ]
