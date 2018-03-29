@@ -6,3 +6,6 @@ from .models import Quote
 def home( request ):
 	quotes = Quote.objects
 	return render( request, 'quoteCalculator/home.html' , { 'quotes': quotes } )
+
+def calculateQuote( request ):
+    return render( request, 'quoteCalculator/calculateQuote.html' )	
