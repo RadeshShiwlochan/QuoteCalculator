@@ -14,7 +14,7 @@ def calculateQuote( request ):
     return render( request, 'quoteCalculator/calculateQuote.html' )	
 
 def calculate_rate( request ):
-    form = Quote(request.POST or None )
+    form = CreateQuote(request.POST or None )
 
     if form.is_valid():
         form.save()
