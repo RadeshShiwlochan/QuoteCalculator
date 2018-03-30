@@ -24,10 +24,11 @@
     <div class="container">
         <div class="col-md-9 order-md-3">
           <h4>Address</h4>	
-          <form action="{% url 'calculate_rate' %}">
+          <form action="{% url 'calculate_rate' %}" method="POST">
+          	{% csrf_token %}
           	<div class="mb-3">
                 <label for="firstName">Address</label>
-                <input type="text" class="form-control" name="address">
+                <input type="text" class="form-control" name="address"  id="">
             </div>
 
             <hr class="mb-4">
@@ -35,32 +36,32 @@
             <div class="row">
               <div class="col-md-3 mb-3">
                 <label for="lastName">Monthly Rent</label>
-                <input type="text" class="form-control" name="monthly_rent">
+                <input type="number" class="form-control" name="monthly_rent" id="">
               </div>
               <div class="col-md-3 mb-3">
-              	<label for="username">Unit Number</label>
-	            <input type="text" class="form-control" name="unit_number">
+              	<label for="unit_number">Unit Number</label>
+	            <input type="number" class="form-control" name="unit_number" id="unit_number">
               </div>
               <div class="col-md-3 mb-3">
-	               <label for="email">Vacancy</label>
-	               <input type="text" class="form-control" name="vacancy">
+	               <label for="vacancy">Vacancy</label>
+	               <input type="number" class="form-control" name="vacancy" id="vacancy">
 	            </div>
             </div>
 
             <div class="row">
                 <div class="col-md-3 mb-3">
-                    <label for="address">Bedrooms</label>
-                    <input type="text" class="form-control" name="bedrooms">
+                    <label for="bedrooms">Bedrooms</label>
+                    <input type="number" class="form-control" name="bedrooms" id="bedrooms">
                 </div>
 
                 <div class="col-md-3 mb-3">
-                    <label for="address">Bathrooms</label>
-                    <input type="text" class="form-control" name="bedrooms">
+                    <label for="bathrooms">Bathrooms</label>
+                    <input type="number" class="form-control" name="bathrooms" id="bathrooms">
                 </div>
 
                 <div class="col-md-3 mb-3">
-                    <label for="address">Annual Total</label>
-                    <input type="text" class="form-control" name="bedrooms">
+                    <label for="annual_total">Annual Total</label>
+                    <input type="number" class="form-control" name="annual_total" id="annual_total">
                 </div>
             </div>
             
@@ -68,51 +69,51 @@
             <h4>Expense Items</h4>
             <div class="row">
 	            <div class="col-md-3 mb-3">
-	              <label for="address">Marketing</label>
-	              <input type="text" class="form-control" name="bedrooms">
+	              <label for="marketing">Marketing</label>
+	              <input type="number" class="form-control" name="marketing" id="marketing">
 	            </div>
 
 	            <div class="col-md-3 mb-3">
-	              <label for="address">Taxes</label>
-	              <input type="text" class="form-control" name="bedrooms">
+	              <label for="taxes">Taxes</label>
+	              <input type="number" class="form-control" name="taxes" id="taxes">
 	            </div>
 
 	            <div class="col-md-3 mb-3">
-	              <label for="address">Insurance</label>
-	              <input type="text" class="form-control" name="bedrooms">
+	              <label for="insurance">Insurance</label>
+	              <input type="number" class="form-control" name="insurance" id="insurance">
 	            </div>
 
 	            <div class="col-md-3 mb-3">
-	              <label for="address">Repairs</label>
-	              <input type="text" class="form-control" name="bedrooms">
+	              <label for="repairs">Repairs</label>
+	              <input type="number" class="form-control" name="repairs" id="repairs">
 	            </div>
 	        </div>    
             <div class="row">
 	            <div class="col-md-3 mb-3">
-	              <label for="address">Administration</label>
-	              <input type="text" class="form-control" name="bedrooms">
+	              <label for="admin">Administration</label>
+	              <input type="number" class="form-control" name="admin" id="admin">
 	            </div>
 
 	            <div class="col-md-3 mb-3">
-	              <label for="address">Payroll</label>
-	              <input type="text" class="form-control" name="bedrooms">
+	              <label for="payroll">Payroll</label>
+	              <input type="number" class="form-control" name="payroll" id="payroll">
 	            </div>
 
 	            <div class="col-md-3 mb-3">
-	              <label for="address">Utility</label>
-	              <input type="text" class="form-control" name="bedrooms">
+	              <label for="utility">Utility</label>
+	              <input type="number" class="form-control" name="utility" id="utility">
 	            </div>
 
 	            <div class="col-md-3 mb-3">
-	              <label for="address">Management</label>
-	              <input type="text" class="form-control" name="bedrooms">
+	              <label for="management">Management</label>
+	              <input type="number" class="form-control" name="management" id="management">
 	            </div>
             </div>
 
             <hr class="mb-4">
 	        <div class="mb-3">
-	            <label for="address">Capital Rate</label>
-	            <input type="text" class="form-control" name="bedrooms">
+	            <label for="cap_rate">Capital Rate</label>
+	            <input type="number" class="form-control" name="cap_rate" id="cap_rate">
 	        </div>
             
             <hr class="mb-4">
